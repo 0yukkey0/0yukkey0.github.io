@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>pagesにhexoで作ったページを公開する方法 | タイトルはおいおい</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="はじめに 公開してみる Github pagesの作成 nodeのインストール hexoのインストール hexoを起動してページを見てみる Configの修正   おわりに   はじめに某エンジニアのコミュニケーションサイトの記事でも見かけたが、この記事はN番煎じの記事である。 私が導入時に躓いた箇所が難点かあったため、Hello World備忘録として記事を残すことにした。 そのため、新規性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pagesにhexoで作ったページを公開する方法">
+<meta property="og:url" content="https://0yukkey0.github.io/2019/04/13/pagesにhexoで作ったページを公開する方法/index.html">
+<meta property="og:site_name" content="タイトルはおいおい">
+<meta property="og:description" content="はじめに 公開してみる Github pagesの作成 nodeのインストール hexoのインストール hexoを起動してページを見てみる Configの修正   おわりに   はじめに某エンジニアのコミュニケーションサイトの記事でも見かけたが、この記事はN番煎じの記事である。 私が導入時に躓いた箇所が難点かあったため、Hello World備忘録として記事を残すことにした。 そのため、新規性">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2019-04-13T14:02:44.292Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="pagesにhexoで作ったページを公開する方法">
+<meta name="twitter:description" content="はじめに 公開してみる Github pagesの作成 nodeのインストール hexoのインストール hexoを起動してページを見てみる Configの修正   おわりに   はじめに某エンジニアのコミュニケーションサイトの記事でも見かけたが、この記事はN番煎じの記事である。 私が導入時に躓いた箇所が難点かあったため、Hello World備忘録として記事を残すことにした。 そのため、新規性">
+  
+    <link rel="alternative" href="/atom.xml" title="タイトルはおいおい" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">タイトルはおいおい</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://0yukkey0.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="github-pagesにhexoで作ったページを公開する方法" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/04/13/pagesにhexoで作ったページを公開する方法/" class="article-date">
+  <time datetime="2019-04-13T13:01:52.000Z" itemprop="datePublished">2019-04-13</time>
+</a>
+		</span>
+		<span class="meta-elements author">よっしー</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      pagesにhexoで作ったページを公開する方法
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<!-- toc -->
+<ul>
+<li><a href="#はじめに">はじめに</a></li>
+<li><a href="#公開してみる">公開してみる</a><ul>
+<li><a href="#github-pagesの作成">Github pagesの作成</a></li>
+<li><a href="#nodeのインストール">nodeのインストール</a></li>
+<li><a href="#hexoのインストール">hexoのインストール</a></li>
+<li><a href="#hexoを起動してページを見てみる">hexoを起動してページを見てみる</a></li>
+<li><a href="#configの修正">Configの修正</a></li>
+</ul>
+</li>
+<li><a href="#おわりに">おわりに</a></li>
+</ul>
+<!-- tocstop -->
+<h2><span id="はじめに">はじめに</span></h2><p>某エンジニアのコミュニケーションサイトの記事でも見かけたが、この記事はN番煎じの記事である。</p>
+<p>私が導入時に躓いた箇所が難点かあったため、Hello World備忘録として記事を残すことにした。</p>
+<p>そのため、新規性は皆無なので、強い人はブラウザバックをクリックすることを推奨します。</p>
+<h2><span id="公開してみる">公開してみる</span></h2><p>だいたいはググッて出てきたやつをそのままやっていけばいい。</p>
+<h3><span id="github-pagesの作成">Github pagesの作成</span></h3><p>githubで新規リポジトリの作成を行う。</p>
+<p>この時必ず<br>自分のユーザネーム.github.io<br>でリポジトリを作る</p>
+<h3><span id="nodeのインストール">nodeのインストール</span></h3><p>入れてください。</p>
+<p>今回の記事の本質じゃないので省略。</p>
+<h3><span id="hexoのインストール">hexoのインストール</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h3><span id="hexoを起動してページを見てみる">hexoを起動してページを見てみる</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<p>とするとblogディレクトリが生成され、その中に環境が構築される</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">% hexo server</span><br></pre></td></tr></table></figure>
+<p>でlocalhost:4000でページが見れる</p>
+<h3><span id="configの修正">Configの修正</span></h3><p>blogディレクトリの直下に_config.ymlファイルがあるので適当に開いて編集する。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+<p>編集内容は以下のように<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: タイトル</span><br><span class="line">subtitle: 自由に</span><br><span class="line">description:</span><br><span class="line">keyword<span class="variable">s:</span></span><br><span class="line">author: HN</span><br><span class="line"><span class="keyword">language</span>: ja</span><br><span class="line">timezone: Asia/Tokyo</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line">## If your site <span class="keyword">is</span> <span class="keyword">put</span> in <span class="keyword">a</span> subdirectory, <span class="keyword">set</span> url <span class="keyword">as</span> <span class="string">'http://yoursite.com/child'</span> <span class="built_in">and</span> root <span class="keyword">as</span> <span class="string">'/child/'</span></span><br><span class="line">ur<span class="variable">l:</span> http<span class="variable">s:</span>//自分のユーザネーム.github.io/</span><br><span class="line">roo<span class="variable">t:</span> /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_default<span class="variable">s:</span></span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">## Doc<span class="variable">s:</span> http<span class="variable">s:</span>//hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line"> <span class="built_in">type</span>: git</span><br><span class="line"> repo: git@github.<span class="keyword">com</span>:自分のユーザネーム/自分のユーザネーム.github.io.git</span><br><span class="line"> branch: master</span><br></pre></td></tr></table></figure></p>
+<p>修正が終わったら以下を実行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">$ git remote add origin git@github.com:自分のユーザネーム/自分のユーザネーム.github.io.git</span><br><span class="line">$ hexo deploy -g</span><br></pre></td></tr></table></figure>
+<p>ここで私は躓きました。<br>何度修正を確認しても、<br><code>ERROR Deployer not found: git</code><br>と出てきてデプロイされない…</p>
+<p>以下をやり忘れていたのが問題でした<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<p>その後もう一度デプロイしたら、編集内容が反映されました。</p>
+<h2><span id="おわりに">おわりに</span></h2><p>これで自分の編集内容がGithubのリポジトリに保存&amp;投稿することができるようになりました。</p>
+<p>使う機会は少ないけど勉強の1つにはなったかなと…</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+    
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:0yukkey0.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">タイトルはおいおい</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2019 よっしー<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
